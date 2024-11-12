@@ -1,0 +1,22 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false
+      database: testinterview
+  security:
+    enabled: false
+
+logging:
+  level:
+    root: INFO
+
+    
+server:
+  port: 9191
+  
+app:
+  users:
+    url: https://jsonplaceholder.typicode.com/users
+  trainers:
+    url: https://jsonplaceholder.typicode.com/users
+    
