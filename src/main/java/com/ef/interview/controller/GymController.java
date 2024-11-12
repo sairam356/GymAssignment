@@ -38,9 +38,8 @@ public class GymController {
 
 	  
 	    @GetMapping("/users/{id}")
-	    public ResponseEntity<User> getUserById(@PathVariable String id) {
-	        Optional<User> user = gymService.getUserById(id);
-	        return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+	    public User getUserById(@PathVariable String id) {
+	        return gymService.getUserById(id);
 	    }
 
 	    @GetMapping("/trainers")
@@ -50,9 +49,8 @@ public class GymController {
 
 	   
 	    @GetMapping("/trainers/{id}")
-	    public ResponseEntity<Trainer> getTrainerById(@PathVariable String id) {
-	        Optional<Trainer> trainer = gymService.getTrainerById(id);
-	        return trainer.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+	    public Trainer getTrainerById(@PathVariable String id) {
+	        return gymService.getTrainerById(id);
 	    }
 
 	    @PostMapping("/book")

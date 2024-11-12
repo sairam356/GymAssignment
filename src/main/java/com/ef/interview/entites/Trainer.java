@@ -1,5 +1,6 @@
 package com.ef.interview.entites;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -16,7 +17,7 @@ import lombok.NoArgsConstructor;
 @JsonInclude(value = Include.NON_NULL)
 public class Trainer {
 
-	
+	@Id
     private Long id;
     private String name;
     private String username;

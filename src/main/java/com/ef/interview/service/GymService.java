@@ -30,8 +30,8 @@ public class GymService {
     }
 
    
-    public Optional<User> getUserById(String userId) {
-        return userRepository.findById(userId);
+    public  User getUserById(String userId) {
+        return userRepository.findByUsername(userId);
     }
 
     
@@ -40,8 +40,8 @@ public class GymService {
     }
 
     
-    public Optional<Trainer> getTrainerById(String trainerId) {
-        return trainerRepository.findById(trainerId);
+    public Trainer getTrainerById(String trainerId) {
+        return trainerRepository.findByUsername(trainerId);
     }
 
 
